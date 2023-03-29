@@ -1,0 +1,59 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 10pt;
+  color: #1f1d1d;
+}
+
+img {
+  max-height: 10mm;
+  max-width: 15mm;
+  padding: 2mm;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+td,
+th {
+  width: 9%;
+  min-width: 9%;
+  border: 0.25mm solid #1f1d1d;
+  padding: 2mm;
+  text-align: center;
+}
+
+p.multiline > span {
+  display: block;
+}
+
+@page {
+  size: 21cm 29.7cm;
+  margin: 15mm 45mm 15mm 45mm;
+}
+h1,
+h2 {
+  font-size: 2em;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+}
+.desc {
+  font-size: 2em;
+}
+hr.nextpage {
+  page-break-after: always;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1>img{
+  padding: 0 2mm;
+}

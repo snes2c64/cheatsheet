@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+./build
+rsync -arv --delete dist/* shnbk.de:domains/snes2c64sheet.shnbk.de/htdocs/

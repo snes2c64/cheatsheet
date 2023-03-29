@@ -1,0 +1,101 @@
+link(rel="stylesheet", href="./styles.css")
+h1
+  img(
+    src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/logo_full.png"
+  )
+  span SNES2C64 MAP OVERVIEW
+
+.noprint.desc
+  p.multiline
+    span This is a printable cheat sheet for your current button maps.
+    span Every row represents a map, the first column is the maps button.
+    span Every column represents a button on the SNES controller, while the first row represents the SNES buttons.
+    span The icons in the cells represent the actions that are mapped to the button.
+    span When printing, this should fit on a A4 page in portrait mode.
+    span There will be two pages, print the second side on the back of the first page, it's small user manual.
+
+table
+  tr
+    th Map \ Button
+
+    th.up
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/dpad_up.png"
+      )
+    th.down
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/dpad_down.png"
+      )
+    th.left
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/dpad_left.png"
+      )
+    th.right
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/dpad_right.png"
+      )
+    th
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/snes_button_b-full.png"
+      )
+    th.a
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/snes_button_a-full.png"
+      )
+    th.y
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/snes_button_y-full.png"
+      )
+    th.x
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/snes_button_x-full.png"
+      )
+    th.l
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/snes_shoulder_l.png"
+      )
+    th.r
+      img(
+        src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/snes_shoulder_r.png"
+      )
+  each map in maps
+    tr
+      th
+        img(
+          src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/" + map.icon + ".png"
+        )
+      each action in map.actions
+        td
+          each icon in action
+            img(
+              src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/" + icon + ".png"
+            )
+
+hr.nextpage
+
+h1
+  img(
+    src="https://raw.githubusercontent.com/snes2c64/icons/master/dist/logo_full.png"
+  )
+  span SNES2C64 Quick Start Guide
+
+h2 Choosing a map
+p.desc.multiline
+  span Press Start, LED1 will start ti flash.
+  span Now press the Button assigned to the map you like to use, it's the first icon in the Table on the other side.
+h2 Change Autofire Speed
+p.desc.multiline
+  span Press and hold Start, LED1 will light up.
+  span Adjust your autofire speed with L and R while holding Start.
+  span Both LED's will show the current speed.
+  span Release all Buttons when ready.
+h2 Disabling and enabling Buttons
+p.desc.multiline
+  span You can temporarily disable and enable buttons by pressing Select, LED2 will start to flash.
+  span Press the button you want to disable or enable.
+  span LED2 will light up while LED1 shows the current status of the button, on for enabled, off for disabled.
+
+h2 Resetting with the Controller
+p.desc.multiline
+  span when in doubt, you can reset the Controller by pressing Start and Select at the same time.
+  span this will bring you back to map1, no buttons disabled and autofire speed set to default.

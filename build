@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+test -d dist && rm -rf dist
+mkdir dist
+minify app.js -o dist/
+minify styles.css -o dist/
+minify index.html -o dist/
+pug -c -o dist tpl.pug
+sed -i "s/###/$(date +%s)/g" dist/index.html
